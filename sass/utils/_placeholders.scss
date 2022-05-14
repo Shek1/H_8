@@ -1,0 +1,36 @@
+%title {
+    color: $secondary-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+%button {
+    display: inline-block;
+    min-width: 200px;
+    padding: 10px 29px;
+    border: transparent;
+    border-radius: 4px;
+    color: $secondary-accent-color;
+    background-color: $primary-accent-color;
+}
+
+%logo {
+    color: $primary-accent-color;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+%visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
