@@ -1,43 +1,59 @@
 .hero {
-    margin: 0 auto;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
-        url('../images/hero.jpg');
-    background-size: cover;
-    max-width: 1600px;
-    height: 600px;
-    font-weight: 900;
+      url('../images/heromobile.jpg');
+  }
+  @media screen and (max-width: 1199px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+      url('../images/herotablet.jpg');
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+      url('../images/herodesktop.jpg');
+  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  height: 600px;
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
+    font-weight: 900;
     letter-spacing: 0.06em;
+    @media screen and (max-width: 1199px) {
+      max-width: 360px;
+      font-size: 24px;
+      line-height: 42px;
+    }
+    color: $secondary-accent-color;
+    text-transform: uppercase;
+  }
 
-    &__title {
-        display: inline-block;
-        margin: auto;
-        margin-top: 200px;
-        margin-bottom: 30px;
-        max-width: 696px;
-        font-size: 44px;
-        color: $secondary-accent-color;
-        text-transform: uppercase
+  &__button {
+    @extend %button;
+    display: block;
+    margin: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
     }
-    
-    &__button {
-        @extend %button;
-        display: block;
-        margin: auto;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.87;
-        letter-spacing: 0.06em;
-        cursor: pointer;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    
-        &:hover,
-        &:focus {
-            background-color: #188ce8;
-        }
-    
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
